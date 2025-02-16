@@ -140,6 +140,65 @@
                 margin: 0 auto 20px;
             }
         }
+
+        .membership-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #1a237e;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #1a237e;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #283593;
+        }
+
+        .success-message {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -148,10 +207,11 @@
         <a href="#about">About</a>
         <a href="#events">Events</a>
         <a href="#contact">Contact</a>
+        <a href="#membership">Join Us</a>
     </nav>
 
     <div class="header" id="home">
-        <h1>Greek Students Association</h1>
+        <h1>Greek Students' Association</h1>
         <p>Celebrating Hellenic Culture and Heritage on Campus</p>
     </div>
 
@@ -186,6 +246,45 @@
         </div>
     </div>
 
+    <div class="section" id="membership">
+        <h2>Become a Member</h2>
+        <div class="membership-form">
+            <div class="success-message" id="successMessage">
+                Thank you for your application! We'll be in touch soon.
+            </div>
+            <form action="process_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="year">Year of Study</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="First">First Year</option>
+                        <option value="Second">Second Year</option>
+                        <option value="Third">Third Year</option>
+                        <option value="Fourth">Fourth Year</option>
+                        <option value="Graduate">Graduate Student</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">What interests you about GSA?</label>
+                    <textarea id="interests" name="interests" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
     <div class="section" id="contact">
         <h2>Contact Us</h2>
         <div class="contact-grid">
@@ -207,5 +306,15 @@
     <footer>
         <p>&copy; 2023 Greek Students Association. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Check for success parameter in URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('signup') === 'success') {
+                document.getElementById('successMessage').style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
