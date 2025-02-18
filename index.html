@@ -139,65 +139,81 @@
                 max-width: 300px;
                 margin: 0 auto 20px;
             }
+
+            nav {
+                text-align: center;
+                padding: 15px 10px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 15px;
+                font-size: 0.9em;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+                padding: 0 15px;
+            }
+
+            .header p {
+                font-size: 1.2em;
+                padding: 0 15px;
+            }
+
+            .header img {
+                max-width: 80% !important;
+                height: auto;
+            }
+
+            .section {
+                padding: 60px 15px;
+            }
+
+            .section h2 {
+                font-size: 2em;
+                padding: 0 15px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+
+            .contact-item {
+                margin: 10px 15px;
+            }
+
+            .membership-form {
+                margin: 0 15px;
+                padding: 20px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .submit-btn {
+                width: 100%;
+                margin-top: 10px;
+            }
         }
 
-        .membership-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 2em;
+            }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+            .header p {
+                font-size: 1.1em;
+            }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #1a237e;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: #1a237e;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: #283593;
-        }
-
-        .success-message {
-            background: #4CAF50;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: none;
+            .event-card {
+                padding: 20px 15px;
+            }
         }
     </style>
 </head>
