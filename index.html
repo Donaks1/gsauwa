@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greek Students Association</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -286,15 +287,69 @@
                 padding: 20px 15px;
             }
         }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(26, 35, 126, 0.95);
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav a {
+                display: block;
+                padding: 15px 0;
+                margin: 0;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
-        <a href="#membership">Join Us</a>
+        <div class="nav-container">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+                <a href="#membership">Join Us</a>
+            </div>
+        </div>
     </nav>
 
     <div class="header" id="home">
@@ -385,12 +440,12 @@
                 <p>greekclub.uwa@gmail.com</p>
             </div>
             <div class="contact-item">
-                <h3>Social Media</h3>
-                <p>@gsauwa</p>
+                <h3>Instagram</h3>
+                <a href="https://www.instagram.com/gsauwa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><p>@gsauwa</p></a>
             </div>
             <div class="contact-item">
                 <h3>Facebook</h3>
-                <p>Greek Students Association UWA</p>
+                <a href="https://www.facebook.com/greekclubuwa/"><p>Greek Students Association UWA</p></a>
             </div>
         </div>
     </div>
@@ -407,6 +462,24 @@
                 document.getElementById('successMessage').style.display = 'block';
             }
         }
+
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                document.querySelector('.nav-links').classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
