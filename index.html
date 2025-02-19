@@ -344,10 +344,10 @@
             </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
+                <a href="#membership">Join Us</a>
                 <a href="#about">About</a>
                 <a href="#events">Events</a>
                 <a href="#contact">Contact</a>
-                <a href="#membership">Join Us</a>
             </div>
         </div>
     </nav>
@@ -357,6 +357,42 @@
         <p>Celebrating Hellenic Culture and Heritage on Campus</p>
         <img src="latest_logo.png" style="max-width: 25rem; display: block; margin: 5px auto;"> 
     </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <a style="text-decoration: none" href="https://checkout.square.site/merchant/MLG5R4PWSYX0M/checkout/6D4POOPZFRM5URU3CIR3LSOW"><button class="buy-button" onclick="buyNow()" id="membership">BECOME A MEMBER</button></a>
+    </div>
+
+    <style>
+        .buy-button {
+            background-color: #0D5EAF;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 2rem 4rem;
+            border: none;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
+            /* Remove any margin if present */
+            margin: 0 auto;
+            /* Add display inline-block for proper centering */
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .buy-button:hover {
+            background-color: #1771ca;
+            color: #ffffff;
+            transform: scale(103%);
+        }
+    </style>
+
+    <script>
+        function buyNow() {
+            window.location.href = "https://yourwebsite.com/checkout";
+        }
+    </script>
 
     <div class="section" id="about">
         <h2>About Us</h2>
@@ -389,7 +425,14 @@
         </div>
     </div>
 
-    <div class="section" id="membership">
+
+        
+    
+    </body>
+    </html>
+    
+
+    <!-- <div class="section" id="membership">
         <h2>Become a Member</h2>
         <div class="membership-form">
             <div class="success-message" id="successMessage">
@@ -441,7 +484,7 @@
                 <button type="submit" class="submit-btn">Submit Application</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <div class="section" id="contact">
         <h2>Contact Us</h2>
@@ -466,7 +509,6 @@
     </footer>
 
     <script>
-        // Check for success parameter in URL
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('signup') === 'success') {
@@ -478,14 +520,12 @@
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Close menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('active');
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!e.target.closest('nav')) {
                 document.querySelector('.nav-links').classList.remove('active');
