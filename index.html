@@ -275,6 +275,7 @@
         }
 
         @media (max-width: 480px) {
+            
             .header h1 {
                 font-size: 2em;
             }
@@ -374,9 +375,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             transition: transform 0.3s ease;
-            /* Remove any margin if present */
             margin: 0 auto;
-            /* Add display inline-block for proper centering */
             display: inline-block;
             margin-top: 2rem;
         }
@@ -386,6 +385,24 @@
             color: #ffffff;
             transform: scale(103%);
         }
+
+        @media (max-width: 768px) {
+            .buy-button {
+            font-size: 1.5rem;
+            padding: 1.5rem 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .buy-button {
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            width: 90%;
+            max-width: 300px;
+            }
+        }
+
+
     </style>
 
     <script>
@@ -416,7 +433,17 @@
         <div class="event-card">
             <img src="church-greece.jpg" alt="pic of greece" class="event-image">
             <div class="event-content">
-                <h3>Fresher Welcome!</h3>
+                <h3>Fresher Welcome Sundowner!</h3>
+                <p></p>
+                <p><strong>Date:</strong> February 26, 2025</p>
+                <p><strong>Time:</strong> 5:30PM</p>
+                <p><strong>Location:</strong> Matilda Bay</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="winetour.png" alt="pic of greece" class="event-image">
+            <div class="event-content">
+                <h3>Euro Club Wine Tour</h3>
                 <p></p>
                 <p><strong>Date:</strong> TBC</p>
                 <p><strong>Time:</strong> TBC</p>
