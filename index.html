@@ -359,8 +359,60 @@
         <img src="latest_logo.png" style="max-width: 25rem; display: block; margin: 5px auto;"> 
     </div>
 
-    <div style="text-align: center; margin: 20px 0;">
-        <a style="text-decoration: none" href="https://checkout.square.site/merchant/MLG5R4PWSYX0M/checkout/6D4POOPZFRM5URU3CIR3LSOW"><button class="buy-button" onclick="buyNow()" id="membership">BECOME A MEMBER</button></a>
+
+    <div class="section" id="membership">
+        <h2>Become a Member</h2>
+        <div class="membership-form">
+            <div class="success-message" id="successMessage">
+                Thank you for your application! We'll be in touch soon.
+            </div>
+            <form action="https://formsubmit.co/47a7ff191ef9c221010b9d435ae53884" method="POST" id="membershipForm">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://checkout.square.site/merchant/MLG5R4PWSYX0M/checkout/6D4POOPZFRM5URU3CIR3LSOW">
+                <input type="hidden" name="_subject" value="New GSA Membership Application">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address (Uni or personal)</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="student-number">UWA Student Number (If Applicable)</label>
+                    <input type="number" id="student-number" name="student-number">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]+" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year of Study</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="First">First Year</option>
+                        <option value="Second">Second Year</option>
+                        <option value="Third">Third Year</option>
+                        <option value="Fourth">Fourth Year</option>
+                        <option value="Graduate">Graduate Student</option>
+                        <option value="Graduate">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">What interests you about GSA? (optional)</label>
+                    <textarea id="interests" name="interests"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit and Proceed to Payment</button>
+            </form>
+        </div>
     </div>
 
     <style>
@@ -424,7 +476,7 @@
             <img src="oday.jpg" alt="O-day" class="event-image">
             <div class="event-content">
                 <h3>O-DAY!</h3>
-                <p>Come visit our stall and join the parea! etc.</p>
+                <p>Come visit our stall and join the parea!</p>
                 <p><strong>Date:</strong> February 21, 2025</p>
                 <p><strong>Time:</strong> 11:00 AM - 3:00 PM</p>
                 <p><strong>Location:</strong> James Oval, UWA</p>
@@ -434,7 +486,7 @@
             <img src="church-greece.jpg" alt="pic of greece" class="event-image">
             <div class="event-content">
                 <h3>Fresher Welcome Sundowner!</h3>
-                <p></p>
+                <p>Join us to vote in our new fresher reps <br> and get to know our committee and other members!</p>
                 <p><strong>Date:</strong> February 26, 2025</p>
                 <p><strong>Time:</strong> 5:30PM</p>
                 <p><strong>Location:</strong> Matilda Bay</p>
@@ -444,7 +496,17 @@
             <img src="winetour.png" alt="pic of greece" class="event-image">
             <div class="event-content">
                 <h3>Euro Club Wine Tour</h3>
-                <p></p>
+                <p>We Get Together With Our Fellow European Clubs <br> And Tour Some Of the Best Wineries In Perth!</p>
+                <p><strong>Date:</strong> TBC</p>
+                <p><strong>Time:</strong> TBC</p>
+                <p><strong>Location:</strong> TBC</p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="olympia.png" alt="pic of greece" class="event-image">
+            <div class="event-content">
+                <h3>OLYMPIA II</h3>
+                <p>Our Biggest Event Of The Year. Nothing Beats A Greek Party!</p>
                 <p><strong>Date:</strong> TBC</p>
                 <p><strong>Time:</strong> TBC</p>
                 <p><strong>Location:</strong> TBC</p>
@@ -459,59 +521,7 @@
     </html>
     
 
-    <!-- <div class="section" id="membership">
-        <h2>Become a Member</h2>
-        <div class="membership-form">
-            <div class="success-message" id="successMessage">
-                Thank you for your application! We'll be in touch soon.
-            </div>
-            <form action="https://formsubmit.co/fd84670980c8e2bda2e9b18b9bf1acce" method="POST">
-                <input type="hidden" name="_next" value="https://donaks1.github.io/gsauwa/">
-                <input type="hidden" name="_subject" value="New GSA Membership Application">
-                <input type="hidden" name="_template" value="table">
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address (Uni or personal)</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">UWA Student Number (If Applicable)</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Phone Number</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="year">Year of Study</label>
-                    <select id="year" name="year" required>
-                        <option value="">Select Year</option>
-                        <option value="First">First Year</option>
-                        <option value="Second">Second Year</option>
-                        <option value="Third">Third Year</option>
-                        <option value="Fourth">Fourth Year</option>
-                        <option value="Graduate">Graduate Student</option>
-                        <option value="Graduate">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="interests">What interests you about GSA? (optional)</label>
-                    <textarea id="interests" name="interests" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Submit Application</button>
-            </form>
-        </div>
-    </div> -->
+    
 
     <div class="section" id="contact">
         <h2>Contact Us</h2>
@@ -558,6 +568,19 @@
                 document.querySelector('.nav-links').classList.remove('active');
             }
         });
+
+        // Remove or comment out this event listener since FormSubmit will handle the redirect
+        /*
+        document.getElementById('membershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            }).then(() => {
+                window.location.href = 'https://checkout.square.site/merchant/MLG5R4PWSYX0M/checkout/6D4POOPZFRM5URU3CIR3LSOW';
+            });
+        });
+        */
     </script>
 </body>
 </html>
