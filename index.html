@@ -335,6 +335,169 @@
                 width: 100%;
             }
         }
+
+        #social-feed {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        @media (max-width: 768px) {
+            #social-feed {
+                padding: 40px 15px;
+            }
+            
+            .instagram-media {
+                width: 100% !important;
+                min-width: auto !important;
+            }
+        }
+
+        /* Add to your existing <style> section */
+        .instagram-slider {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.3s ease;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .slider-item {
+            flex: 0 0 300px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .post-info {
+            padding: 15px;
+        }
+
+        .post-info p {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .post-info a {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a237e;
+            z-index: 1;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        @media (max-width: 768px) {
+            .slider-item {
+                flex: 0 0 calc(100% - 40px);
+            }
+            
+            .slider-container {
+                padding: 20px;
+            }
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .instagram-post {
+            width: 100%;
+            max-width: 540px;
+        }
+
+        @media (max-width: 768px) {
+            .instagram-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .instagram-carousel {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 50px; /* Add padding for arrows */
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Center the Instagram embed */
+            align-items: center;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn.prev {
+            left: 0;
+        }
+
+        .carousel-btn.next {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -457,12 +620,6 @@
 
     </style>
 
-    <script>
-        function buyNow() {
-            window.location.href = "https://yourwebsite.com/checkout";
-        }
-    </script>
-
     <div class="section" id="about">
         <h2>About Us</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
@@ -514,14 +671,33 @@
         </div>
     </div>
 
-
-        
-    
-    </body>
-    </html>
-    
-
-    
+<div class="section" id="social-feed">
+    <h2>Follow Us on Instagram</h2>
+    <div class="instagram-carousel">
+        <button class="carousel-btn prev" aria-label="Previous post">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DGkl-TQv957/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                        data-instgrm-version="14">
+                    </blockquote>
+                </div>
+                <div class="carousel-slide">
+                    <blockquote class="instagram-media"
+                        data-instgrm-permalink="https://www.instagram.com/p/DGX4HQ_vQFp/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                        data-instgrm-version="14">
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next post">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
 
     <div class="section" id="contact">
         <h2>Contact Us</h2>
@@ -545,42 +721,8 @@
         <p>&copy; 2025 Greek Students Association. All rights reserved.</p>
     </footer>
 
-    <script>
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('signup') === 'success') {
-                document.getElementById('successMessage').style.display = 'block';
-            }
-        }
-
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('nav')) {
-                document.querySelector('.nav-links').classList.remove('active');
-            }
-        });
-
-        // Remove or comment out this event listener since FormSubmit will handle the redirect
-        /*
-        document.getElementById('membershipForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            fetch(this.action, {
-                method: 'POST',
-                body: new FormData(this)
-            }).then(() => {
-                window.location.href = 'https://checkout.square.site/merchant/MLG5R4PWSYX0M/checkout/6D4POOPZFRM5URU3CIR3LSOW';
-            });
-        });
-        */
-    </script>
+    <!-- Scripts -->
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
