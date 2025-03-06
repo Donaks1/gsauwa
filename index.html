@@ -498,6 +498,24 @@
         .carousel-btn.next {
             right: 0;
         }
+
+        /* Add this to your existing styles */
+        .event-card.past-event {
+            background: #e8f5e9;  /* Light green background */
+            position: relative;
+        }
+
+        .event-card.past-event::after {
+            content: 'Completed!';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4caf50;  /* Darker green for the label */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
     </style>
 </head>
 <body>
@@ -623,13 +641,13 @@
     <div class="section" id="about">
         <h2>About Us</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            The Greek Students Association is dedicated to promoting Greek culture, fostering community, and creating lasting connections among students of Greek heritage and philhellenes alike. We organize cultural events, educational workshops, and social gatherings throughout the academic year.
+            Established in 2021, the Greek Students’ Association of UWA (GSA) was founded with a deep sense of purpose: to bring together young Greeks and Philhellenes who share a passion for Greek culture, language, food, and traditions. Our mission is to provide more than just a student organization; we offer a home where young Greeks can be proud of their identity, deepen their connection to their culture, and form lifelong friendships. We are committed to ensuring that Greek culture not only survives but thrives, remaining an integral part of the lives of young Greeks in Perth.
         </p>
     </div>
 
     <div class="section" id="events">
-        <h2>Upcoming Events</h2>
-        <div class="event-card">
+        <h2>Upcoming Events Semester 1</h2>
+        <div class="event-card past-event">
             <img src="oday.jpg" alt="O-day" class="event-image">
             <div class="event-content">
                 <h3>O-DAY!</h3>
@@ -639,8 +657,8 @@
                 <p><strong>Location:</strong> James Oval, UWA</p>
             </div>
         </div>
-        <div class="event-card">
-            <img src="church-greece.jpg" alt="pic of greece" class="event-image">
+        <div class="event-card past-event">
+            <img src="Harrison.jpg" alt="pic of greece" class="event-image">
             <div class="event-content">
                 <h3>Fresher Welcome Sundowner!</h3>
                 <p>Join us to vote in our new fresher reps <br> and get to know our committee and other members!</p>
