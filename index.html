@@ -572,20 +572,157 @@
     </nav>
 
     <div class="header" id="home">
-        <h1>Greek Students' Association</h1>
+        <h1>Greek Students Association</h1>
         <p>Celebrating Hellenic Culture and Heritage on Campus</p>
         <img src="latest_logo.png" alt="Greek Students Association UWA Logo" style="max-width: 25rem; display: block; margin: 5px auto;"> 
     </div>
 
-    <div class="section" id="join-team">
-        <h2>Join the GSA Team!</h2>
-        <div class="team-signup" id="teamSignup">
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; line-height: 1.8;">
-                We're looking for passionate indivuals to help shape the future of GSA! This year is promising to be the biggest year of the club so far with bigger and better events than we've ever held before 
-                and a greater emphasis on committee bonding. We can't wait to grow our GSA Parea and look forward to getting to know you better! 
-                Applications will close on the <strong>15th April - 11:59PM</strong> so make sure to get your application in before then so you don't miss out! 
-            </p>
-            <a href="https://forms.gle/nqMxoWHqibR16oUK7" class="signup-btn">Apply Now</a>
+    <style>
+        .buy-button {
+            background-color: #0D5EAF;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 2rem 4rem;
+            border: none;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
+            margin: 0 auto;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .buy-button:hover {
+            background-color: #1771ca;
+            color: #ffffff;
+            transform: scale(103%);
+        }
+
+        @media (max-width: 768px) {
+            .buy-button {
+            font-size: 1.5rem;
+            padding: 1.5rem 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .buy-button {
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            width: 90%;
+            max-width: 300px;
+            }
+        }
+
+
+    </style>
+
+    <body>
+    <div class="section" id="olympia-gallery">
+        <h2>Olympia II Photo Album</h2>
+        <h3 style="text-align: center; padding-bottom: 1rem;"> <a href="https://adobe.ly/4mEU1io">Click here for the full downloadable photo gallery!</a></h3>
+        <div class='lr_embed' style='position: relative; padding-bottom: 50%; height: 0; overflow: hidden;'>
+            <iframe id='iframe' src='https://lightroom.adobe.com/embed/shares/8ec7c148e4294971bec6d9ec9ec7de54/slideshow?background_color=%232D2D2D&color=%23999999' frameborder='0' style='width:100%; height:100%; position: absolute; top:0; left:0;'></iframe>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            Established in 2021, the Greek Students’ Association of UWA (GSA) was founded with a deep sense of purpose: to bring together young Greeks and Philhellenes who share a passion for Greek culture, language, food, and traditions. Our mission is to provide more than just a student organization; we offer a home where young Greeks can be proud of their identity, deepen their connection to their culture, and form lifelong friendships. We are committed to ensuring that Greek culture not only survives but thrives, remaining an integral part of the lives of young Greeks in Perth.
+        </p>
+    </div>
+
+    <div class="section" id="events-sem2">
+        <h2>Upcoming Events Semester 2</h2>
+        <div class="event-card past-event">
+            <img src="Olympia2.png" alt="Greek Games Competition Event" class="event-image">
+            <div class="event-content">
+                <h3>OLYMPIA II</h3>
+                <p>Last year, you made Olympia the biggest GSA party ever. This year, we're leveling up.</p>
+                <br>
+                <p><strong>Date:</strong> August 8, 2025</p>
+                <p><strong>Time:</strong> 8:00PM - 12:00AM</p>
+                <p><strong>Location: </strong> 20 Parker Street Northbridge</p>
+                <p><strong>Tickets: </strong> <a href="https://events.humanitix.com/olympia-ii?_gl=1*1bp0la6*_gcl_au*Nzg2MDgzMDA0LjE3NTIxMDk0Mjk.*_ga*OTg2NzQ3NjE4LjE3NDMwNDg2NDY.*_ga_LHKW5FR9N6*czE3NTIxMDk0MjkkbzEwJGcxJHQxNzUyMTEwNTk3JGo0MiRsMCRoMA..">Sold Out!</a></p>
+            </div>
+        </div>
+        <div class="event-card past-event">
+            <img src="gala.jpg" alt="Starry Night Gala Event" class="event-image">
+            <div class="event-content">
+                <h3>Starry Night Gala</h3>
+                <p>Dress to impress and join us for a night under the stars!</p>
+                <br>
+                <p><strong>Date:</strong> August 22, 2025</p>
+                <p><strong>Time:</strong> 7:00PM - 12:00AM</p>
+                <p><strong>Location: </strong> 75 Stirling Street, Northbridge</p>
+                <p><strong>Tickets: </strong> <a href="#">Sold Out!</a></p>
+            </div>
+        </div>
+        <div class="event-card">
+            <img src="PUBCRAWL.png" alt="Greek Night Cultural Event" class="event-image">
+            <div class="event-content">
+                <h3>Greeks + Romans Pubcrawl</h3>
+                <p>Join us as we explore the best bars in Perth with our fellow European Neighbour!</p>
+                <br>
+                <p><strong>Date:</strong> TBC</p>
+                <p><strong>Time:</strong> TBC</p>
+                <p><strong>Location: TBC </strong></p>
+                <p><strong>Tickets: </strong> <a href="#">Coming soon!</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="events">
+        <h2>Upcoming Events Semester 1</h2>
+        <div class="event-card past-event">
+            <img src="oday.jpg" alt="UWA O-Day 2025 GSA Stall" class="event-image">
+            <div class="event-content">
+                <h3>O-DAY!</h3>
+                <p>Come visit our stall and join the parea!</p>
+                <br>
+                <p><strong>Date:</strong> February 21, 2025</p>
+                <p><strong>Time:</strong> 11:00 AM - 3:00 PM</p>
+                <p><strong>Location:</strong> James Oval, UWA</p>
+            </div>
+        </div>
+        <div class="event-card past-event">
+            <img src="Harrison.jpg" alt="GSA Fresher Welcome Sundowner at Matilda Bay" class="event-image">
+            <div class="event-content">
+                <h3>Fresher Welcome Sundowner!</h3>
+                <p>Join us to vote in our new fresher reps <br> and get to know our committee and other members!</p>
+                <br>
+                <p><strong>Date:</strong> February 26, 2025</p>
+                <p><strong>Time:</strong> 5:30PM</p>
+                <p><strong>Location:</strong> Matilda Bay</p>
+            </div>
+        </div>
+        <div class="event-card past-event">
+            <img src="winetour.png" alt="Euro Club Wine Tour Event Perth" class="event-image">
+            <div class="event-content">
+                <h3>Euro Club Wine Tour</h3>
+                <p>We Get Together With Our Fellow European Clubs <br> And Tour Some Of the Best Wineries In Perth!</p>
+                <br>
+                <p><strong>Date:</strong> April 27, 2025</p>
+                <p><strong>Time:</strong> 10:30AM - 4:30PM</p>
+                <p><strong>Location: </strong> Perth's Best Euro Wineries</p>
+                <p><strong>Tickets: </strong> <a href="https://events.humanitix.com/la-dolce-vina-the-euro-wine-tour">Get them here!</a></p>
+
+            </div>
+        </div>
+        <div class="event-card past-event">
+            <img src="eurovision.jpg" alt="Euro Club Wine Tour Event Perth" class="event-image">
+            <div class="event-content">
+                <h3>Eurovision Watchalong</h3>
+                <p>Join us for our watchalong of Eurovision 2025 <br> in collaboration with UWA's best European clubs!</p>
+                <br>
+                <p><strong>Date:</strong> May 16, 2025</p>
+                <p><strong>Time:</strong> 5:30PM - 7:30PM</p>
+                <p><strong>Location: </strong> Social Sciences Lecture Theatre</p>
+                <p><strong>Tickets: </strong> <a href="https://events.humanitix.com/eurovision-screening-presented-by-the-uwa-euro-clubs?fbclid=IwZXh0bgNhZW0CMTEAAR6e1hiJM56NFPOGuS3MWEpTRlhr2EqfZeDW2FuzXltIAnwvJLnE5UXn-oCilQ_aem_eD6_mITQoyHq1C11qv6tOA">Get them here!</a></p>
+
+            </div>
         </div>
     </div>
 
@@ -641,134 +778,6 @@
                 
                 <button type="submit" class="submit-btn">Submit and Proceed to Payment</button>
             </form>
-        </div>
-    </div>
-
-    <style>
-        .buy-button {
-            background-color: #0D5EAF;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            padding: 2rem 4rem;
-            border: none;
-            border-radius: 1.5rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            transition: transform 0.3s ease;
-            margin: 0 auto;
-            display: inline-block;
-            margin-top: 2rem;
-        }
-
-        .buy-button:hover {
-            background-color: #1771ca;
-            color: #ffffff;
-            transform: scale(103%);
-        }
-
-        @media (max-width: 768px) {
-            .buy-button {
-            font-size: 1.5rem;
-            padding: 1.5rem 3rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .buy-button {
-            font-size: 1.2rem;
-            padding: 1rem 2rem;
-            width: 90%;
-            max-width: 300px;
-            }
-        }
-
-
-    </style>
-
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            Established in 2021, the Greek Students’ Association of UWA (GSA) was founded with a deep sense of purpose: to bring together young Greeks and Philhellenes who share a passion for Greek culture, language, food, and traditions. Our mission is to provide more than just a student organization; we offer a home where young Greeks can be proud of their identity, deepen their connection to their culture, and form lifelong friendships. We are committed to ensuring that Greek culture not only survives but thrives, remaining an integral part of the lives of young Greeks in Perth.
-        </p>
-    </div>
-
-    <div class="section" id="events-sem2">
-        <h2>Upcoming Events Semester 2</h2>
-        <div class="event-card">
-            <img src="Olympia25.png" alt="Greek Games Competition Event" class="event-image">
-            <div class="event-content">
-                <h3>OLYMPIA II</h3>
-                <p>Last year, you made Olympia the biggest GSA party ever. This year, we're leveling up.</p>
-                <br>
-                <p><strong>Date:</strong> August 8, 2025</p>
-                <p><strong>Time:</strong> 8:00PM - 12:00AM</p>
-                <p><strong>Location: </strong> 20 Parker Street Northbridge</p>
-                <p><strong>Tickets: </strong> <a href="https://events.humanitix.com/olympia-ii?_gl=1*1bp0la6*_gcl_au*Nzg2MDgzMDA0LjE3NTIxMDk0Mjk.*_ga*OTg2NzQ3NjE4LjE3NDMwNDg2NDY.*_ga_LHKW5FR9N6*czE3NTIxMDk0MjkkbzEwJGcxJHQxNzUyMTEwNTk3JGo0MiRsMCRoMA..">Get them here!</a></p>
-            </div>
-        </div>
-        <div class="event-card">
-            <img src="PUBCRAWL.png" alt="Greek Night Cultural Event" class="event-image">
-            <div class="event-content">
-                <h3>Greeks + Romans Pubcrawl</h3>
-                <p>Join us as we explore the best bars in Perth with our fellow European Neighbour!</p>
-                <br>
-                <p><strong>Date:</strong> TBC</p>
-                <p><strong>Time:</strong> TBC</p>
-                <p><strong>Location: </strong> TBC</p>
-                <p><strong>Tickets: </strong> <a href="#">Coming soon!</a></p>
-            </div>
-        </div>
-    </div>
-    <div class="section" id="events">
-        <h2>Upcoming Events Semester 1</h2>
-        <div class="event-card past-event">
-            <img src="oday.jpg" alt="UWA O-Day 2025 GSA Stall" class="event-image">
-            <div class="event-content">
-                <h3>O-DAY!</h3>
-                <p>Come visit our stall and join the parea!</p>
-                <br>
-                <p><strong>Date:</strong> February 21, 2025</p>
-                <p><strong>Time:</strong> 11:00 AM - 3:00 PM</p>
-                <p><strong>Location:</strong> James Oval, UWA</p>
-            </div>
-        </div>
-        <div class="event-card past-event">
-            <img src="Harrison.jpg" alt="GSA Fresher Welcome Sundowner at Matilda Bay" class="event-image">
-            <div class="event-content">
-                <h3>Fresher Welcome Sundowner!</h3>
-                <p>Join us to vote in our new fresher reps <br> and get to know our committee and other members!</p>
-                <br>
-                <p><strong>Date:</strong> February 26, 2025</p>
-                <p><strong>Time:</strong> 5:30PM</p>
-                <p><strong>Location:</strong> Matilda Bay</p>
-            </div>
-        </div>
-        <div class="event-card past-event">
-            <img src="winetour.png" alt="Euro Club Wine Tour Event Perth" class="event-image">
-            <div class="event-content">
-                <h3>Euro Club Wine Tour</h3>
-                <p>We Get Together With Our Fellow European Clubs <br> And Tour Some Of the Best Wineries In Perth!</p>
-                <br>
-                <p><strong>Date:</strong> April 27, 2025</p>
-                <p><strong>Time:</strong> 10:30AM - 4:30PM</p>
-                <p><strong>Location: </strong> Perth's Best Euro Wineries</p>
-                <p><strong>Tickets: </strong> <a href="https://events.humanitix.com/la-dolce-vina-the-euro-wine-tour">Get them here!</a></p>
-
-            </div>
-        </div>
-        <div class="event-card past-event">
-            <img src="eurovision.jpg" alt="Euro Club Wine Tour Event Perth" class="event-image">
-            <div class="event-content">
-                <h3>Eurovision Watchalong</h3>
-                <p>Join us for our watchalong of Eurovision 2025 <br> in collaboration with UWA's best European clubs!</p>
-                <br>
-                <p><strong>Date:</strong> May 16, 2025</p>
-                <p><strong>Time:</strong> 5:30PM - 7:30PM</p>
-                <p><strong>Location: </strong> Social Sciences Lecture Theatre</p>
-                <p><strong>Tickets: </strong> <a href="https://events.humanitix.com/eurovision-screening-presented-by-the-uwa-euro-clubs?fbclid=IwZXh0bgNhZW0CMTEAAR6e1hiJM56NFPOGuS3MWEpTRlhr2EqfZeDW2FuzXltIAnwvJLnE5UXn-oCilQ_aem_eD6_mITQoyHq1C11qv6tOA">Get them here!</a></p>
-
-            </div>
         </div>
     </div>
 
