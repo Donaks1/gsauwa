@@ -16,7 +16,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image" href="attemptico.png">
+    <link rel="icon" type="image" href="latest.ico">
 
     <style>
         * {
@@ -605,6 +605,35 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
+        .featured-event {
+            background: linear-gradient(135deg, #0d5eaf, #1a237e);
+            color: white;
+            border-radius: 12px;
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+        }
+
+        .featured-event h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .featured-event p {
+            margin: 8px 0;
+            font-size: 1.1em;
+        }
+
+        .featured-event .signup-btn {
+            margin-top: 18px;
+            background: #ffd700;
+            color: #1a237e;
+        }
+
+        .featured-event .signup-btn:hover {
+            background: #ffe45a;
+        }
     </style>
 </head>
 <body>
@@ -627,6 +656,16 @@
         <h1>Greek Students Association</h1>
         <p>Celebrating Hellenic Culture and Heritage on Campus</p>
         <img src="latest_logo.png" alt="Greek Students Association UWA Logo" style="max-width: 25rem; display: block; margin: 5px auto;"> 
+    </div>
+
+    <div class="section" id="featured-quiz-night" style="padding-top: 40px; padding-bottom: 20px;">
+        <div class="featured-event">
+            <h2>My Big Fat Greek Quiz Night</h2>
+            <p><strong>Friday May 15, 2026 | 7:00 PM</strong></p>
+            <p>Hellenic Community Centre, 20 Parker Street Northbridge</p>
+            <p>Grab your team and lock in your spot now.</p>
+            <a href="#events" class="signup-btn">Get Quiz Night Tickets</a>
+        </div>
     </div>
 
     <style>
@@ -839,11 +878,11 @@
         <div class="collapsible-section">
             <div class="collapsible-header" onclick="toggleCollapsible(this)">
                 <h3>2026 Semester 1 Events</h3>
-                <span class="collapsible-toggle">▼</span>
+                <span class="collapsible-toggle open">▼</span>
             </div>
-            <div class="collapsible-content">
+            <div class="collapsible-content open">
                 <div class="collapsible-content-inner">
-                    <div class="event-card">
+                    <div class="event-card past-event">
                         <img src="oday.jpg" alt="UWA O-Day 2026 GSA Stall" class="event-image">
                         <div class="event-content">
                             <h3>O-DAY!</h3>
@@ -852,9 +891,10 @@
                             <p><strong>Date:</strong> February 20, 2026</p>
                             <p><strong>Time:</strong> 11:00 AM - 3:00 PM</p>
                             <p><strong>Location:</strong> James Oval, UWA</p>
+                            <p><strong>Tickets:</strong> Sold Out!</p>
                         </div>
                     </div>
-                    <div class="event-card">
+                    <div class="event-card past-event">
                         <img src="Harrison.jpg" alt="GSA Welcome Sundowner" class="event-image">
                         <div class="event-content">
                             <h3>Welcome Sundowner</h3>
@@ -863,17 +903,19 @@
                             <p><strong>Date:</strong> February 27, 2026</p>
                             <p><strong>Time:</strong> TBC</p>
                             <p><strong>Location:</strong> TBC</p>
+                            <p><strong>Tickets:</strong> Sold Out!</p>
                         </div>
                     </div>
-                    <div class="event-card">
-                        <img src="https://images.unsplash.com/photo-1470137430626-983a37b8ea46?auto=format&fit=crop&w=800&q=80" alt="Euro Sundowner Event" class="event-image">
+                    <div class="event-card past-event">
+                        <img src="euro_sun.JPG" alt="Euro Sundowner Event" class="event-image">
                         <div class="event-content">
                             <h3>Euro Sundowner</h3>
                             <p>Enjoy time with our European clubs for a relaxed evening of music, food, drinks, games and good company!</p>
                             <br>
-                            <p><strong>Date:</strong> TBC</p>
-                            <p><strong>Time:</strong> TBC</p>
+                            <p><strong>Date:</strong> Thursday March 5, 2026</p>
+                            <p><strong>Time:</strong> 3:00 PM</p>
                             <p><strong>Location:</strong> Oak Lawn, UWA </p>
+                            <p><strong>Tickets:</strong> Sold Out!</p>
                         </div>
                     </div>
                     <div class="event-card">
@@ -882,21 +924,21 @@
                             <h3>Euro Club Wine Tour</h3>
                             <p>We Get Together With Our Fellow European Clubs <br> And Tour Some Of the Best Wineries In Perth!</p>
                             <br>
-                            <p><strong>Date:</strong> TBC</p>
-                            <p><strong>Time:</strong> TBC </p>
+                            <p><strong>Date:</strong> Saturday April 18, 2026</p>
+                            <p><strong>Time:</strong> 10:00 AM</p>
                             <p><strong>Location: </strong> Perth's Best Euro Wineries</p>
                             <p><strong>Tickets: </strong> <a href="">Get them here!</a></p>
                         </div>
                     </div>
                     <div class="event-card">
-                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Taverna Night" class="event-image">
+                        <img src="quiz_icon.jpg" alt="Taverna Night" class="event-image">
                         <div class="event-content">
-                            <h3>GSA Taverna Night</h3>
-                            <p>An incredible night of good Greek food, music, dance, and drinks!</p>
+                            <h3>My Big Fat Greek Quiz Night</h3>
+                            <p>Bring your team and test your trivia skills in a fun Greek-themed quiz night!</p>
                             <br>
-                            <p><strong>Date:</strong> TBC</p>
-                            <p><strong>Time:</strong> TBC</p>
-                            <p><strong>Location:</strong> TBC</p>
+                            <p><strong>Date:</strong> Friday May 15, 2026</p>
+                            <p><strong>Time:</strong> 7:00 PM</p>
+                            <p><strong>Location:</strong> Hellenic Community Centre, 20 Parker Street Northbridge</p>
                         </div>
                     </div>
                 </div>
